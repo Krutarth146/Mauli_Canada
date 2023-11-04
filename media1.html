@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        .container{
+            /* border: 2px solid red; */
+            width: 500px;
+            /* margin: 2px; */
+            padding: 2px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .left{
+            /* border: 2px solid green; */
+            width: 47%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .right{
+            /* border: 2px solid blue; */
+            width: 47%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .img2{
+            display: none;
+        }
+
+        img{
+            height: 240px;
+        }
+
+        .main{
+            width: 100vw;
+            height: 100vh;
+            /* border: 2px solid magenta; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 370px)
+        {
+            .left{
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                border: 2px solid red;
+            }
+        }
+
+        @media (max-width: 328px)
+        {
+            .container{
+                height: 500px;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                /* border: 2px solid red; */
+            }
+        }
+
+        @media (max-width: 322px)
+        {
+            .img2{
+                display: inline-block;
+            }
+
+            .img1{
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="left">
+                <h1>Text 1</h1>
+                <h1>Text 2</h1>
+            </div>
+            <div class="right">
+                <img src="https://images.unsplash.com/photo-1697464025977-cde058cfce42?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDh8SnBnNktpZGwtSGt8fGVufDB8fHx8fA%3D%3D" alt="Error" width="200px" class="img1">
+
+                <img src="https://images.unsplash.com/photo-1697446757926-5cb4e5ad8a4e?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEzfHFQWXNEenZKT1ljfHxlbnwwfHx8fHw%3D" alt="" class="img2">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
